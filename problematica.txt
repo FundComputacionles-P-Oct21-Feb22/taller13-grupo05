@@ -1,0 +1,66 @@
+1.  Inicio
+2.  funcion principal()
+
+3.  k, i[0-n]
+4.  k1, i[0-n]
+5.  contador, i[0-n] <-- 0
+6.  Escribir "Ingrese un numero"
+7.  Leer k  // 1920
+8.  k1 <-- k // 1920
+9.  j, i[0-n] <-- 0
+10.  residuo, i[0-n]
+11. mensaje, x(2000)[{a-z}, {BS}, {A-Z}] 
+
+12. Mientras k1 > 0 Haga // V // V // V // V // F
+13.	residuo <-- obtenerResiduo(k1)
+14.	Escribir residuo + "* 10 elevado a la potencia" + j
+15.	mensaje <-- mensaje + resultado(residuo, contador)
+16.	k1 <-- k1/10 // 1920%10=192 // 192%10=19 // 19%10=1 // 1%10=0,1
+17.	j <-- j + 1 // 1 // 2 // 3 
+18.	contador <-- contador + 1
+19. Fin_Mientras
+
+20.  fin funcion principal
+
+
+
+
+21. funcion obtenerResiduo(i, k1) : i
+22. residuo, i[0-n]
+23. residuo <-- k1 MOD 10 // 1920%10= *0 // 192%10=2 // 19%10=9 // 1%10=1
+24. retorna residuo
+25. fin obtenerResiduo
+
+26. funcion resultado(i, residuo; i, contador) : x 
+27. mensaje, x(2000)[{a-z}, {BS}, {A-Z}] 
+28. Si contador = 1 Entonces
+29.   mensaje <-- residuo + "(" + residuo + "unidades)"
+30. Caso Contrario
+31.	Si contador = 2 Entonces
+32.	  mensaje <-- residuo * 10 + "(" + residuo + "decenas)"
+33.	Caso Contrario
+34.		Si contador = 3 Entonces
+35.		  mensaje <-- residuo * 100 + "(" + residuo + "centenas)"
+36.		Caso Contrario
+37.			Si contador = 4 Entonces
+38.			  mensaje <-- residuo * 1000 + "(" + residuo + "unidad de millar)"	
+39.			Fin_Si
+40.		Fin_Si
+41.	Fin_Si
+42. Fin_Si
+
+43. retorna mensaje
+44. fin resultado
+
+
+45. Fin
+
+
+
+-----------------------------------------------
+// pantalla
+0 * 10 elevado a la potencia 0
+2 * 10 elevado a la potencia 1
+9 * 10 elevado a la potencia 2
+1 * 10 elevado a la potencia 3
+
